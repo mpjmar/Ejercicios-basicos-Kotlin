@@ -1,21 +1,19 @@
 fun main() {
 	val num = 12430
-    var res = invertir(num)
+    val res = invertir(num)
 
     println("Número original: $num")
     println("Número invertido: $res")
 }
 
 fun invertir(n: Int): String {
-    var num = n * 10 + 1
-    var res = 0
-    var invertido = ""
+    var num = n
+    var res = ""
 
     while (num > 0) {
-    	res = res * 10 + num % 10
+    	res += num % 10
         num /= 10
     }
 
-    invertido = "$res"
-    return invertido
+    return res
 }
